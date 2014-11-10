@@ -12,7 +12,7 @@ struct _employee {
 	float salary;
 };
 
-/* We'll give the above struct a "nickname" to make it easier to user */
+/* We'll give the above struct a "nickname" to make it easier to use. */
 typedef struct _employee EMPLOYEE;
 
 
@@ -25,12 +25,12 @@ void main_menu (void);            // displays the main menu
 void error (const char* error_msg);  // displays an error message
 
 /* util.c */
-char* getstr (char* string, int size, FILE* file_ptr);    // modification of fgets() // it is used for all input tasks to avoid use of scanf() gets()
+char* getstr (char* string, int size, FILE* file_ptr);    // modification of fgets() - it is used for all input tasks to avoid use of scanf() gets()
 int no_of_records (FILE* file, int element_size);         // returns the no of records of given size in a file
 char* strcase (char* string, int flag);                   // converts a string into uppercase (flag=1) or lowercase (flag=0)
 int emp_cmp (const void *e1, const void *e2);             // compares
 
-/* database.c */
+/* db.c */
 void add_employee (void);
 void search_employee (void);
 void search_by_id (int id);
